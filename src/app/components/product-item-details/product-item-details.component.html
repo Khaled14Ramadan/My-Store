@@ -1,0 +1,26 @@
+
+<div class="detail-container">
+    <div class="img">
+        <img [src]="product.url" class="product-image" alt="">
+    </div>
+    <div class="detail-item">
+        <h1>{{product.name}}</h1>
+        <p class="lead text-muted fw-bold">${{product.price}}</p>
+        <p>{{product.description}}</p>
+        
+        <select #select class="select-input form-select" name="count" [id]='"id"+product.id' (change)="getCount(select.value)">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button class="btn mt-1" (click)="addProductCart(product)">Add to cart</button>
+        <a routerLink="/" class="back-link d-block"><fa-icon [icon]="arrowLeft"></fa-icon>Back to product list</a>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+.success{
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #33e5bc;
+    font-size: 3rem;
+}
+
+.backbtn {
+    background-color: #33B5E5;
+    color: #ffffff;
+    margin-top: 20px;
+}

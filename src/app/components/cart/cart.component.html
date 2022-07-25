@@ -1,0 +1,46 @@
+
+<div class="container" [hidden]="empMSG">
+    <div class="cart" >
+        <div class="cart-item" *ngFor="let product of products">
+            <img [src]="product.url" class="product-image" alt="">
+            <div class="cart-item-details">
+                <h2>{{product.name}}</h2>
+                <p class="lead text-muted fw-bold">${{product.price}}</p>
+                <div class="d-flex align-items-center">
+                    <label for="count">Amount:</label>
+                    <input type="number" #count name="count" min="0" id="count" class="number-input ms-1 form-control"
+                      (change)="updateCount(product , count.value)" [value]="product.count">
+                </div>
+            </div>
+        </div>
+        <div class="total fw-bold fs-4">Total: $<span class="text-info">{{total|number:'.3'}}</span></div>
+    </div>
+
+    <div class="confirm">
+        <form #form="ngForm"  (ngSubmit)="submitForm()">
+            <label for="name" class="d-block fw-bold">Full name</label>
+            <input type="text" name="name" id="name" class="mb-4 d-block form-text w-100 p-1" 
+            required minlength="3" maxlength="32"  placeholder="(minimum 3 characters)" [(ngModel)]="name">
+
+            <label for="address" class="d-block fw-bold">Address</label>
+            <input type="text" name="address" id="address" class="mb-4 d-block form-text w-100 p-1" 
+            required minlength="6" maxlength="32" placeholder="(minimum 6 characters)" [(ngModel)]="address">
+
+            <label for="card" class="d-block fw-bold">credit card number</label>
+            <input type="text" name="card" id="card" class="mb-2 d-block form-text w-100 p-1" 
+            required minlength="16" maxlength="16" placeholder="(16-digit number)" [(ngModel)]="card"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '');">
+            
+            <p class="load text-muted">We'll never share your payment details with anyone else</p>
+            <button class="btn btn-info text-white" [disabled]="form.invalid">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="empty-cart-message"  [hidden]="!empMSG">
+    <h2>you are not add any product to the cart!!</h2>
+    <a routerLink="/">
+        <button class="btn backbtn">Back to product list</button>
+    </a>
+</div>
+

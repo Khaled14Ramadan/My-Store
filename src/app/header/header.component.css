@@ -1,0 +1,16 @@
+.header {
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  fa-icon{
+    color : rgb(54, 95, 121);
+    font-size: small;
+  }
