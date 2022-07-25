@@ -34,7 +34,7 @@ add them to a shopping cart, and ultimately complete the checkout process.
 #### Project features
 
  **Product list** page, this page is contain your child (Product item component).
- **Product item** , this is child in product list component for display the available products for the user to choose and add to their cart.
+ **Product item** page, this is child in product list component for display the available products for the user to choose and add to their cart.
 			**onClickImg *function*
 				*click the product's image to call this function
 				*when call this function , it is add this product to (product item details)and you will navigate to that
@@ -46,7 +46,7 @@ add them to a shopping cart, and ultimately complete the checkout process.
 				*click product's (add to cart)button to call this function
 				*when call this function , it call updataCartProducts function from cartService (service).
 
-  **Product item details** page	this page is display one product with more details.
+  **Product item details** page, this page is display one product with more details.
 			**getCount * function*
 				*change product's (input selector) to call this function
 				*when call this fuction , it chamge the counter for this product in the cart
@@ -62,5 +62,5 @@ add them to a shopping cart, and ultimately complete the checkout process.
 			**submitForm *function*
 				*click on submit button (disable untit success full form inputs) ,to call this function
 				*when call this function , it navigate to success page with your name and total price.
-  **success**page this page display the success massage with button (back to product list).
+  **success**page, this page display the success massage with button (back to product list).
   
