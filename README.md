@@ -35,9 +35,11 @@ add them to a shopping cart, and ultimately complete the checkout process.
 
 * **Product list** page, this page is contain your child (Product item component).
 * **Product item** page, this is child in product list component for display the available products for the user to choose and add to their cart.
+
 			**onClickImg *function*
 				*click the product's image to call this function
 				*when call this function , it is add this product to (product item details)and you will navigate to that
+				
 			**getCount *function*
 				*change product's (input selector) to call this function
 				*when call this fuction , it chamge the counter for this product in the cart
@@ -47,6 +49,7 @@ add them to a shopping cart, and ultimately complete the checkout process.
 				*when call this function , it call updataCartProducts function from cartService (service).
 
 * **Product item details** page, this page is display one product with more details.
+
 			**getCount * function*
 				*change product's (input selector) to call this function
 				*when call this fuction , it chamge the counter for this product in the cart
@@ -54,13 +57,17 @@ add them to a shopping cart, and ultimately complete the checkout process.
 			**addProductCart *function*
 				*click product's (add to cart)button to call this function
 				*when call this function , it call updataCartProducts function from cartService (service).
+				
 * **cart**page, this page display the cart's products and you can change the counter for any cart's product ,
 				contain form for submit this buy operation.
+				
 			**updateCount *function*
 				*change the product's (input amount) to call this function
 				*when call this function , update product's counter and total price .
+				
 			**submitForm *function*
 				*click on submit button (disable untit success full form inputs) ,to call this function
 				*when call this function , it navigate to success page with your name and total price.
+				
 * **success**page, this page display the success massage with button (back to product list).
   
