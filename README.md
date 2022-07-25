@@ -54,7 +54,7 @@ add them to a shopping cart, and ultimately complete the checkout process.
 			**addProductCart *function*
 				*click product's (add to cart)button to call this function
 				*when call this function , it call updataCartProducts function from cartService (service).
-  **cart **page, this page display the cart's products and you can change the counter for any cart's product ,
+  **cart**page, this page display the cart's products and you can change the counter for any cart's product ,
 				contain form for submit this buy operation.
 			**updateCount *function*
 				*change the product's (input amount) to call this function
@@ -62,5 +62,5 @@ add them to a shopping cart, and ultimately complete the checkout process.
 			**submitForm *function*
 				*click on submit button (disable untit success full form inputs) ,to call this function
 				*when call this function , it navigate to success page with your name and total price.
-  **success **page this page display the success massage with button (back to product list).
+  **success**page this page display the success massage with button (back to product list).
   
