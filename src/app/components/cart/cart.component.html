@@ -9,7 +9,7 @@
                 <div class="d-flex align-items-center">
                     <label for="count">Amount:</label>
                     <input type="number" #count name="count" min="0" id="count" class="number-input ms-1 form-control"
-                      (change)="updateCount(product , count.value)" [value]="product.count">
+                      (ngModelChange)="updateCount(product , count.value)" [ngModel]="product.count" >
                 </div>
             </div>
         </div>

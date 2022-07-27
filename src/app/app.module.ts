@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductItemDetailsComponent } from './components/product-item-details/product-item-details.component';
 import { SuccessComponent } from './components/success/success.component';
 import {FormsModule} from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {FormsModule} from '@angular/forms';
     CartComponent,
     ProductItemComponent,
     ProductItemDetailsComponent,
-    SuccessComponent
+    SuccessComponent,
+    FooterComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

@@ -50,7 +50,15 @@ export class CartComponent implements OnInit {
     {
       if(this.products[i].id === p.id)
       {
-        this.products[i].count = vCount;
+        if(vCount==0)
+        {
+          //to remove this product from array
+          console.log(this.products.splice(i,1));
+        }
+        else
+        {
+          this.products[i].count = vCount;
+        }
         break;
       }
     }

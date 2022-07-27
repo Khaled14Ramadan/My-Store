@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DetailsService } from 'src/app/services/details.service';
 import { product } from './../../models/product';
 import { CartService } from './../../services/cart.service';
@@ -11,6 +11,7 @@ import { CartService } from './../../services/cart.service';
 })
 export class ProductItemComponent implements OnInit {
   @Input('p') product:product;
+  @Output() public chiledEvent =new EventEmitter();
   constructor(private detailsService:DetailsService , private cartService:CartService) {
     this.product ={
       id:0,
@@ -31,7 +32,8 @@ export class ProductItemComponent implements OnInit {
 
   getCount(e:any):void{
     this.product.count=+e;
-    console.log(this.product.count);
+    this.chiledEvent.emit("this counter ");
+    // console.log(this.product.count);
   }
 
   addProductCart(p:product):void

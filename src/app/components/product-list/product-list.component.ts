@@ -11,6 +11,7 @@ import { HttpService } from './../../services/http.service';
 export class ProductListComponent implements OnInit {
 
   products:product[]=[];
+  message:string='';
   constructor(private http:HttpService) { }
 
   ngOnInit(): void {
@@ -21,6 +22,7 @@ export class ProductListComponent implements OnInit {
         }
         this.products = res;
       });
+
   }
 
  
