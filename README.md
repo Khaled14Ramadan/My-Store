@@ -62,12 +62,8 @@ add them to a shopping cart, and ultimately complete the checkout process.
 				contain form for submit this buy operation.
 				
 			**updateCount *function*
-<<<<<<< HEAD
-				*change the product's (input amount) to call this function 
+				*when change the product's (input amount) to call this function 
 				*when the product's (input amount) equal zero , this product wiil remove from products array
-=======
-				*change the product's (input amount) to call this function
->>>>>>> 6b7ac4e48297749d27fe999c911c7eb6fa6917f5
 				*when call this function , update product's counter and total price .
 				
 			**submitForm *function*
