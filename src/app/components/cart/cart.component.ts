@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
     // this.localCarty = localStorage.getItem("cart");
     // this.products = localStorage.getItem("cart")?JSON.parse(this.localCarty) : this.cartService.cartProducts;
     this.calcTotal();
-    if(this.total || this.products!==[] )
+    if(this.total )
     {
       this.empMSG=false;
     }
@@ -41,6 +41,10 @@ export class CartComponent implements OnInit {
     this.products.forEach(p =>{
       this.total += p.price * p.count;
     });
+    if(this.total == 0)
+          {
+            this.empMSG=true;//this for display empty massage if the cart is empty
+          }
   }
 
   //icrease or decrease amount
@@ -53,7 +57,9 @@ export class CartComponent implements OnInit {
         if(vCount==0)
         {
           //to remove this product from array
-          console.log(this.products.splice(i,1));
+          alert('you will remove this product from the cart');
+          this.products.splice(i,1);
+          
         }
         else
         {
